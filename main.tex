@@ -1,0 +1,144 @@
+% Universidade Aberta
+% Template TeX para relatório de trabalhos
+% 2024
+%
+%
+% Dados para a capa
+\newcommand{\Titulo}{Título}
+\newcommand{\Ano}{2024}
+\newcommand{\Autor}{Autor}
+%
+%
+\documentclass[12pt,a4paper,final]{article}
+\usepackage{csquotes}
+\usepackage[portuguese]{babel}
+\usepackage{polyglossia}
+\setdefaultlanguage{portuguese}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[a4paper,top=3cm,bottom=3cm,left=3.5cm,right=2cm]{geometry}
+\usepackage{booktabs}
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[Ligatures=TeX]{Times New Roman}
+\setromanfont[Mapping=tex-text]{Times New Roman}
+\usepackage[pdfauthor=\Autor,
+            pdftitle=\Titulo, 
+		    colorlinks=true,
+            linkcolor=black,
+            citecolor=black,
+            bookmarksopen=true]{hyperref}
+\hypersetup{colorlinks, citecolor=black, urlcolor=black}           
+\usepackage{bookmark}
+\usepackage[style=apa, backend=biber, sortcites, url=true]{biblatex}
+\addbibresource{ref.bib}
+\renewcommand{\baselinestretch}{1.5}
+\begin{document}
+\title{\Titulo}
+\author{\Autor}
+\date{\Ano}
+\pagenumbering{gobble}
+\begin{titlepage}
+    \begin{center}
+        \vspace*{4cm}
+        
+        \textbf{\large UNIVERSIDADE ABERTA}
+        
+        \textbf{\large UNIVERSIDADE DE TRÁS-OS-MONTES E ALTO DOURO}
+        
+        \vspace{1cm}
+        
+		\begin{minipage}{0.4\textwidth}
+            \centering
+            \includegraphics[width=0.8\textwidth]{uab}
+        \end{minipage}
+        \begin{minipage}{0.4\textwidth}
+            \centering
+            \includegraphics[width=0.8\textwidth]{utad}
+        \end{minipage}
+        
+        \vspace{1.5cm}
+        
+        \textbf{\large \Titulo}
+        
+        \vspace{1.5cm}
+        
+        \textbf{\large \Autor}
+        
+        \vspace{2cm}
+        
+        \textbf{\large Mestrado em Engenharia Informática e Tecnologia Web}
+        \vfill
+        \textbf{\Ano}
+    \end{center}
+\end{titlepage}
+\renewcommand{\contentsname}{Índice}
+\cleardoublepage
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\cleardoublepage
+\pagenumbering{arabic}
+\section{Introdução}
+Este é o texto da introdução. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img_meitw}
+    \caption{Exemplo de uma figura}
+    \label{fig:exemplo}
+\end{figure}
+
+\section{Metodologia}
+Este é o texto da metodologia.
+
+\begin{enumerate}
+    \item Item 1
+    \item Item 2
+    \item Item 3
+\end{enumerate}
+
+\section{Descrição}
+Detalhes da descrição da metodologia.
+
+\begin{itemize}
+    \item Item 1
+    \item Item 2
+    \item Item 3
+\end{itemize}
+
+\section{Estado da Arte}
+\subsection{Pesquisa}
+Detalhes da pesquisa sobre o estado da arte.
+
+\subsection{Critérios}
+Critérios da pesquisa sobre o estado da arte.
+
+\section{Resultados}
+Este é o texto dos resultados.
+
+\begin{table}[]
+\centering
+\resizebox{0.2\columnwidth}{!}{%
+\begin{tabular}{@{}|c|cccc|@{}}
+\toprule
+  & A & B & C & D \\ \midrule
+X & 4 & 3 & 2 & 1 \\ \midrule
+Y & 2 & 3 & 4 & 5 \\ \midrule
+Z & 4 & 3 & 2 & 1 \\ \bottomrule
+\end{tabular}%
+}
+\caption{Tabela Exemplo}
+\label{tab:my-table}
+\end{table}
+
+\section{Conclusões}
+Este é o texto da conclusão com uma citação \cite{su15010857}.
+
+\newpage
+\printbibliography
+\end{document}
