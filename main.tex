@@ -21,6 +21,7 @@
 \usepackage{booktabs}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
+\usepackage{pgf-umlsd}
 \usepackage[pdfauthor=\Autor,
     pdftitle=\Titulo,
     colorlinks=true,
@@ -88,7 +89,7 @@
     \section{Introdução}\label{sec:introducao}
     Este é o texto da introdução.
 
-    \begin{figure}[h!]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{img_meitw}
         \caption{Exemplo de uma figura}
@@ -98,6 +99,20 @@
 
     \section{Metodologia}\label{sec:metodologia}
     Este é o texto da metodologia.
+
+    \begin{figure}[H]
+        \centering
+        \begin{sequencediagram}
+            \newthread{t}{:Thread}
+            \newinst[1]{i}{:Instance}
+            \begin{sdblock}{Block}{description}
+                \begin{call}{t}{function()}{i}{}
+                \end{call}
+            \end{sdblock}
+        \end{sequencediagram}
+        \caption{Diagrama de Sequência Exemplo}
+        \label{fig:diagrama-sequencia}
+    \end{figure}
 
     \begin{enumerate}
         \item Item 1
