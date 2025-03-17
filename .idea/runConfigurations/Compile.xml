@@ -1,13 +1,14 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Compile" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
     <texify>
-      <compiler>XELATEX</compiler>
+      <compiler>LUALATEX</compiler>
       <compiler-path />
       <sumatra-path />
       <pdf-viewer>EVINCE</pdf-viewer>
       <viewer-command />
       <compiler-arguments />
       <envs />
+      <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
       <before-run-command />
       <main-file>$PROJECT_DIR$/main.tex</main-file>
       <output-path>$PROJECT_DIR$/out</output-path>

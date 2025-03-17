@@ -5,12 +5,11 @@
 %
 % Dados para a capa
 \newcommand{\Titulo}{Título}
-\newcommand{\Ano}{2025}
+\newcommand{\Ano}{2024}
 \newcommand{\Autor}{Autor}
 %
 %
 \documentclass[12pt,a4paper,final]{article}
-\usepackage[stretch=10]{microtype}
 \usepackage{csquotes}
 \usepackage[portuguese]{babel}
 \usepackage{polyglossia}
@@ -19,9 +18,8 @@
 \graphicspath{ {./images/} }
 \usepackage[a4paper,top=3cm,bottom=3cm,left=3.5cm,right=2cm]{geometry}
 \usepackage{booktabs}
-\usepackage{newtxtext}
-\usepackage{newtxmath}
-\usepackage{pgf-umlsd}
+\setmainfont{Times New Roman}
+\defaultfontfeatures{Ligatures=TeX}
 \usepackage[pdfauthor=\Autor,
     pdftitle=\Titulo,
     colorlinks=true,
@@ -30,8 +28,8 @@
     bookmarksopen=true]{hyperref}
 \hypersetup{colorlinks, citecolor=black, urlcolor=black}
 \usepackage{bookmark}
-\usepackage{float}
-\usepackage[style=apa, backend=biber, sortcites, url=true]{biblatex}
+\usepackage[style=apa, backend=biber, sortcites, url=true, language=portuguese]{biblatex}
+\DeclareLanguageMapping{portuguese}{portuguese-apa}
 \addbibresource{ref.bib}
 \renewcommand{\baselinestretch}{1.5}
 \begin{document}
@@ -84,52 +82,21 @@
     \newpage
     \cleardoublepage
     \pagenumbering{arabic}
-
-
     \section{Introdução}\label{sec:introducao}
     Este é o texto da introdução.
 
-    \begin{figure}[H]
+    \begin{figure}[h!]
         \centering
         \includegraphics[width=0.9\textwidth]{img_meitw}
         \caption{Exemplo de uma figura}
         \label{fig:exemplo}
     \end{figure}
 
-
     \section{Metodologia}\label{sec:metodologia}
     Este é o texto da metodologia.
 
-    \begin{figure}[H]
-        \centering
-        \begin{sequencediagram}
-            \newthread{t}{:Thread}
-            \newinst[1]{i}{:Instance}
-            \begin{sdblock}{Block}{description}
-                \begin{call}{t}{function()}{i}{}
-                \end{call}
-            \end{sdblock}
-        \end{sequencediagram}
-        \caption{Diagrama de Sequência Exemplo}
-        \label{fig:diagrama-sequencia}
-    \end{figure}
-
-    \begin{enumerate}
-        \item Item 1
-        \item Item 2
-        \item Item 3
-    \end{enumerate}
-
-
     \section{Descrição}\label{sec:descricao}
     Detalhes da descrição da metodologia.
-
-    \begin{itemize}
-        \item Item 1
-        \item Item 2
-        \item Item 3
-    \end{itemize}
-
 
     \section{Estado da Arte}\label{sec:estado-da-arte}
 
@@ -139,11 +106,10 @@
     \subsection{Critérios}\label{subsec:criterios}
     Critérios da pesquisa sobre o estado da arte.
 
-
     \section{Resultados}\label{sec:resultados}
     Este é o texto dos resultados.
 
-    \begin{table}[H]
+    \begin{table}[h!]
         \centering
         \resizebox{0.2\columnwidth}{!}{%
             \begin{tabular}{@{}|c|cccc|@{}}
@@ -158,9 +124,8 @@
         \label{tab:my-table}
     \end{table}
 
-
     \section{Conclusões}\label{sec:conclusoes}
-    Este é o texto da conclusão com uma citação \cite{su15010857}.
+    Este é o texto da conclusão com uma citação (\cite{su15010857}).
 
     \newpage
     \printbibliography
